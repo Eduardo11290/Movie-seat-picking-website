@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugarland Theaters - Seat Booking</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sugarland Theaters</h1>
+            <p class="movie-info" id="current-movie-info">Select a movie to continue</p>
+        </header>
+
+        <div class="content-wrapper">
+            <aside class="movie-sidebar">
+                <h2>Now Showing</h2>
+                <div class="movie-list">
+                    <div class="movie-card" data-movie-id="avatar">
+                        <div class="movie-poster">🎬</div>
+                        <div class="movie-details">
+                            <h3>Avatar</h3>
+                            <p class="movie-meta">PG-13 | 162 min</p>
+                            <p class="movie-time">7:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="movie-card" data-movie-id="endgame">
+                        <div class="movie-poster">🎬</div>
+                        <div class="movie-details">
+                            <h3>Avengers: Endgame</h3>
+                            <p class="movie-meta">PG-13 | 181 min</p>
+                            <p class="movie-time">8:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="movie-card" data-movie-id="dark-knight">
+                        <div class="movie-poster">🎬</div>
+                        <div class="movie-details">
+                            <h3>The Dark Knight</h3>
+                            <p class="movie-meta">PG-13 | 152 min</p>
+                            <p class="movie-time">7:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="movie-card" data-movie-id="titanic">
+                        <div class="movie-poster">🎬</div>
+                        <div class="movie-details">
+                            <h3>Titanic</h3>
+                            <p class="movie-meta">PG-13 | 194 min</p>
+                            <p class="movie-time">6:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="movie-card" data-movie-id="inception">
+                        <div class="movie-poster">🎬</div>
+                        <div class="movie-details">
+                            <h3>Inception</h3>
+                            <p class="movie-meta">PG-13 | 148 min</p>
+                            <p class="movie-time">9:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+            <div class="screen-indicator">
+                <div class="screen">SCREEN</div>
+            </div>
+
+            <section id="seat-map-container">
+                <!-- Seat map will be dynamically generated here -->
+            </section>
+
+            <div class="booking-info">
+                <div class="legend">
+                    <div class="legend-item">
+                        <span class="seat-demo available"></span>
+                        <span>Available</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="seat-demo occupied"></span>
+                        <span>Occupied</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="seat-demo selected"></span>
+                        <span>Selected</span>
+                    </div>
+                </div>
+
+                <div class="selected-seats-display">
+                    <h3>Selected Seats:</h3>
+                    <p id="selected-seats-list">None</p>
+                </div>
+            </div>
+
+            <button id="reserve-button" class="reserve-button" disabled>Reserve Seats</button>
+            <button id="back-button" class="back-button" style="display: none;">Back to Areas</button>
+
+            <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                <h2>Booking Confirmed!</h2>
+                <p id="confirmed-seats"></p>
+            </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
